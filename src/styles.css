@@ -164,8 +164,77 @@
     border-color: var(--color-border);
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
-    background-color: var(--color-background);
+    background-color: var(--shell);
     color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    background: var(--lime);
+    color: var(--ink);
   }
 }
+
+@utility text-balance-tight {
+  text-wrap: balance;
+  letter-spacing: -0.035em;
+  line-height: 1.02;
+}
+
+@utility eyebrow {
+  font-size: 0.75rem;
+  letter-spacing: 0.22em;
+  text-transform: lowercase;
+}
+
+@utility no-scrollbar {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@keyframes bar-fill {
+  from {
+    transform: scaleX(0.05);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes float-soft {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@utility animate-float-soft {
+  animation: float-soft 6s ease-in-out infinite;
+}
+
+@utility animate-fade-up {
+  animation: fade-up 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
