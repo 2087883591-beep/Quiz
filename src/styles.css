@@ -238,3 +238,20 @@
   animation: fade-up 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
+
+@keyframes marquee-x {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@utility animate-marquee {
+  animation: marquee-x var(--marquee-duration, 40s) linear infinite;
+}
+
+@utility animate-marquee-reverse {
+  animation: marquee-x var(--marquee-duration, 40s) linear infinite reverse;
+}
