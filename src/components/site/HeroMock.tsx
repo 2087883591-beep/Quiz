@@ -22,7 +22,7 @@ export function HeroMock() {
     <div className="relative rounded-[34px] bg-white/[0.04] p-3 ring-1 ring-line-dark">
       <div className="relative rounded-[26px] bg-surface-light p-5 pt-8 sm:p-8">
         {/* decoded chip */}
-        <div className="absolute -top-3 left-4 z-20 rounded-2xl bg-white p-4 shadow-[0_18px_40px_-18px_rgba(0,0,0,0.5)] sm:left-8">
+        <div className="absolute -top-1 left-4 z-20 rounded-2xl bg-white p-4 shadow-[0_18px_40px_-18px_rgba(0,0,0,0.5)] sm:left-8">
           <div className="flex items-center gap-2">
             <span className="size-1.5 rounded-full bg-lime" />
             <span className="eyebrow text-ink-muted">decoded</span>
@@ -37,7 +37,7 @@ export function HeroMock() {
         </div>
 
         {/* timeline panel */}
-        <div className="relative mt-10 rounded-2xl bg-surface-dark p-5 ring-1 ring-white/5">
+        <div className="relative mt-16 rounded-2xl bg-surface-dark p-5 ring-1 ring-white/5">
           <div className="flex items-center justify-between">
             <span className="text-xs tracking-wide text-muted-foreground">frame-by-frame</span>
             <span className="text-xs tabular-nums text-muted-foreground">0:22</span>
